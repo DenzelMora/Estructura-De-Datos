@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Inicialización del puerto con matriz 10x10 según requerimiento [cite: 22]
-        // Se definen rangos de peso aleatorio (ej. 100 a 500kg) para el constructor
         Puerto miPuerto = new Puerto(10, 10, 100, 500);
         Scanner teclado = new Scanner(System.in);
         int opcion = 0;
@@ -22,10 +20,10 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        // Acceso al menú de registro de buques [cite: 33]
+                   
                         System.out.print("Ingrese el nombre del buque: ");
                         String nombreB = teclado.nextLine();
-                        // Lógica simple para ocupar el arreglo de 10 posiciones [cite: 23]
+                        
                         boolean buqueAsignado = false;
                         for (int i = 0; i < miPuerto.muelleBuques.length; i++) {
                             if (miPuerto.muelleBuques[i] == null) {
@@ -39,8 +37,8 @@ public class Main {
                         break;
 
                     case 2:
-                        // Acceso al menú de registro de contenedores [cite: 34]
-                        miPuerto.mostrarEsquema(); // Muestra esquema antes de ingresar [cite: 43]
+                       
+                        miPuerto.mostrarEsquema(); 
                         System.out.print("Ingrese el origen del contenedor: ");
                         String origen = teclado.nextLine();
                         System.out.print("Ingrese el peso (kg): ");
@@ -49,22 +47,22 @@ public class Main {
                         int col = Integer.parseInt(teclado.nextLine());
 
                         Contenedor nuevo = new Contenedor(peso, origen);
-                        miPuerto.agregarContenedor(col, nuevo); // Lógica de apilamiento [cite: 24, 42]
+                        miPuerto.agregarContenedor(col, nuevo); 
                         break;
 
                     case 3:
-                        // Mostrar el peso total de los contenedores [cite: 35]
+                        
                         double total = miPuerto.calcularPesoTotal();
                         System.out.printf("El peso total en el patio es: %.2f kg\n", total);
                         break;
 
                     case 4:
-                        // Listar de manera agrupada el origen [cite: 36]
+                       
                         miPuerto.listarPorOrigen();
                         break;
 
                     case 5:
-                        // Cierre de la aplicación [cite: 37, 46]
+                       
                         System.out.println("Saliendo del sistema... ¡Buen día!");
                         break;
 

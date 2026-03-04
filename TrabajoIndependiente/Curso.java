@@ -1,7 +1,7 @@
 
-public class Curso {
+public class Curso {//Prueba numero dos patra saber si funciona el commit
 
-    private int id;
+    private int id;//helou
     private String nCurso;
     private String profesor;
     private int estudiantes;

@@ -1,4 +1,4 @@
-package TrabajoIndependiente;
+
 public class Curso {
 
     private int id;

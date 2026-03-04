@@ -1,6 +1,4 @@
-package TrabajoIndependiente;
-
-public class ejecutarCurso {
+public class ejecutarCurso {//prueba para saber si funciona el commit
 
     public static void main(String[] args) {
         

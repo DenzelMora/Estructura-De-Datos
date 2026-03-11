@@ -10,6 +10,7 @@ public class Puerto {
         patioContenedores = new Contenedor[filas][columnas];
         muelleBuques = new Buque[10]; 
         
+        //aqui lo que hacemos es generar contenedores con un pais y peso asignado aleatoriamente siguiendo los valores minimos que les dismos en el constructor.
         Random r = new Random();
         String[] paises = {"Colombia", "China", "EEUU", "Brasil", "España"};
         for (int i = 7; i < filas; i++) { 
@@ -30,6 +31,7 @@ public class Puerto {
         for (int c = 0; c < 10; c++) System.out.print(c + "   ");
         System.out.println("\n    -----------------------------------------");
 
+        //Este for lo que hace es recorrer la matriz donde se guardan los contenedores y imprimiendolo en forma de matriz para mostrar el esquema.
         for (int i = 0; i < 10; i++) {
             System.out.print("F" + i + " | ");
             for (int j = 0; j < 10; j++) {
@@ -47,13 +49,13 @@ public class Puerto {
     public boolean agregarContenedor(int columna, Contenedor nuevoContenedor) {
         boolean asignado = false;
         
-
+        //esto para evitar que el usuario asigne un contenedor en una columna no existente y que esto pueda causar un error en el programa
         if (columna < 0 || columna > 9) {
             System.out.println("Error: Columna Invalida");
             return false;
         }
 
-
+        //Esto lo que hace es un bucle que inicie desde la ultima posicion de la matriz para poder agregar el contenedor, y que este tenga alguna clase de "gravedad" aunque esto funcion a medias porque al ejecutar main y asignar contenedores aleatorios esto no se muestra en la matriz correctamente desde abajo
         for (int fila = 9; fila >= 0; fila--) {
             if (patioContenedores[fila][columna] == null) {
                 patioContenedores[fila][columna] = nuevoContenedor;

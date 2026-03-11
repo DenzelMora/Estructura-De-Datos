@@ -64,13 +64,14 @@ public class Puerto {
                 break;
             }
         }
-
+        //lo que hace es preguntarse si se asigno el contenedor o no
         if (!asignado) {
             System.out.println("Advertencia: La Columna " + columna + " esta llena");
         }
         return asignado;
     }
 
+    //esto lo que hace es recorrer la matriz 10x10 sumando los pesos de todos los contenedores
     public double calcularPesoTotal() {
         double sumaPesos = 0;
         for (int i = 0; i < 10; i++) {
@@ -88,6 +89,10 @@ public class Puerto {
         String[] origenesProcesados = new String[100]; 
         int contadorProcesados = 0;
 
+        /*esto lo que hace es recorrer la matriz verificando si el espacio esta vacio saltarselo
+        esto tambien reccore todo por pais 
+
+        */
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 Contenedor actual = patioContenedores[i][j];

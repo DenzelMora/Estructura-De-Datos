@@ -41,7 +41,6 @@ public class Sistema {
                 if(mapaCarga[i][j] != -1){
                     
                     int energia = mapaCarga[i][j];
-
                     if (energia > 100){
 
                         prioridad = "Alta";

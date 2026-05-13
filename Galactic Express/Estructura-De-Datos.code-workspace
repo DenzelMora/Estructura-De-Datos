@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "Estructura-De-Datos",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"TrabajoIndependiente",
+			"Buques",
+			"Galactic Express"
+		],
+		"java.project.outputPath": "bin",
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		]
+	}
+}

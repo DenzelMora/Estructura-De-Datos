@@ -29,5 +29,5 @@ EL deshacer y rehacer funciona con una clase llamada accion. Esta clase conserva
 
 LAs excepciones se usan cuando ocurren errores inesperados con el fin de evitar cierres inesperados
 
-![Diagrama de mi proyecto ](https://ejemplo.com)
+![Diagrama de mi proyecto ](https://github.com/DenzelMora/Estructura-De-Datos/blob/11f3c2befb019f3dc1ca90119cfc0850b5e5228a/proyectoFinal/Diagrama%20de%20clases.png)
 
